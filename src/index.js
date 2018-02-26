@@ -118,9 +118,9 @@ export default function ({types: t}) {
     function storeMessage({id, description, defaultMessage}, path, state) {
         const {file, opts} = state;
 
-        if (!(id && defaultMessage)) {
+        if (!id) {
             throw path.buildCodeFrameError(
-                '[React Intl] Message Descriptors require an `id` and `defaultMessage`.'
+                '[React Intl] Message Descriptors require an `id`.'
             );
         }
 
